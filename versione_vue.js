@@ -50,11 +50,25 @@ const App = new Vue({
 
        // array generi
        genres: [],
+
+       //valore genere select
+       value: '',
     },
 
     computed: {
-        genreFilter: function() {
-            return if
+        // creo array dischi filtrato
+        genreFiltered: function() {
+
+            // se la value e' '' allora mostra tutti i dischi
+            if(this.value==""){
+                // il valore di ritorno sara' l'array di dischi completo
+                return this.discs
+            } else {
+                // altrimenti filtra l'array di dischi e ritorna solo quelli il cui vgenere e' uguale al value della select
+                return this.discs.filter(disc =>{
+                    return disc.genre == this.value;
+                })
+            }
         }
     }
 

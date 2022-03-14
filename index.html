@@ -16,7 +16,7 @@
         <header class="d-flex justify-between justify-content-between">
             <img src="img/SpLogo.png" alt="h-logo">
 
-            <select name="genre" id="selectGenre">
+            <select name="genre" id="selectGenre" v-model="value" >
                 <option value="">Seleziona il genere</option>
                 <option v-for="genre in genres" :value="genre">{{genre}}</option>
             </select>
@@ -29,7 +29,7 @@
     
                 <div class="row row-cols-lg-5 row-cols-md-3 row-cols-2">
                     
-                    <div v-for="disc in discs" class="col">
+                    <div v-for="disc in genreFiltered" class="col">
                         <div class="ms_card mb-5 p-3" style="min-height:350px">
                             <img :src="disc.poster" alt="disc-img" class="img-fluid mb-4">
                             <div class="d-flex text-center flex-column">
