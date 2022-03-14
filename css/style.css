@@ -1,0 +1,30 @@
+/* header */
+header{
+    padding: 10px 20px;
+    background-color: #2e3a46;
+}
+
+header img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+/* main */
+main{
+    background-color: #1e2d3b;
+    width: 100%;
+    height: calc(100vh - 60px);
+    position: fixed;
+    top: 60px;
+    left: 0;
+    overflow: auto;
+}
+
+.ms_card{
+    background-color: #2e3a46;
+}
+
+.ms_span{
+    font-size: 0.8em;
+}
