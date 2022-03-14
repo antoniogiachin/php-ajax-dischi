@@ -24,24 +24,24 @@
     
                 <div class="row row-cols-lg-5 row-cols-md-3 row-cols-2">
                     
-                    <div class="col">
-    
-                        <div class="ms_card mb-5 p-3">
-                            <img src="" alt="disc-img">
+                    <div v-for="disc in discs" class="col">
+                        <div class="ms_card mb-5 p-3" style="min-height:350px">
+                            <img :src="disc.poster" alt="disc-img" class="img-fluid mb-4">
                             <div class="d-flex text-center flex-column">
-                                <span class="text-uppercase text-white d-block mb-4">
+                                <span class="text-uppercase text-white d-block mb-4"> {{disc.title}}
                                 </span>
-                                <span class="text-secondary ms_span"></span>
-                                <span class="text-secondary ms_span"></span>
+                                <span class="text-secondary ms_span">{{disc.author}}</span>
+                                <span class="text-secondary ms_span">{{disc.year}}</span>
                             </div>
                         </div>
                     </div>
+                    
                 </div>
     
             </div>
     
         </main>
-        
+
     </div>
 
 

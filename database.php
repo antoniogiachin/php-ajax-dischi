@@ -1,5 +1,3 @@
-<!-- Server con array dischi -->
-
 <?php
 
     $database = [
